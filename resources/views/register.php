@@ -72,7 +72,7 @@
                         <h4 class="modal-title" id="Login">Inicio de sesión</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="customer-orders.html" method="post">
+                        <form action="principal.php" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="email-modal" placeholder="Correo electr&oacute;nico">
                             </div>
@@ -352,23 +352,28 @@
 
                         <hr>
 
-                        <form action="customer-orders.html" method="post">
+                        <form method="post">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
-                                <input type="text" class="form-control" id="name">
+                                <input type="text" class="form-control" id="name" name="nombre">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email">
+                                <input type="text" class="form-control" id="email" name="email">
                             </div>
                             <div class="form-group">
                                 <label for="password">Contrase&ntilde;a</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password" name="contrasena">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> Registrar</button>
                             </div>
                         </form>
+                        <?php
+        if(isset($_POST['submit'])){
+            require("registro.php");
+        }
+    ?>
                     </div>
                 </div>
 
@@ -380,14 +385,14 @@
 
                         <hr>
 
-                        <form action="customer-orders.html" method="post">
+                        <form action="validar.php" method="post">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email">
+                                <input type="text" class="form-control" id="email" name="mail">
                             </div>
                             <div class="form-group">
                                 <label for="password">Contrase&ntilde;a</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password" name="pass">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Iniciar sesi&oacute;n</button>
@@ -412,11 +417,9 @@
                         <h4>Pag&iacute;nas</h4>
 
                         <ul>
-                            <li><a href="text.html">Nosotros</a>
+                            <li><a href="text.php">Nosotros</a>
                             </li>
-                            <li><a href="text.html">Terminos y condiciones</a>
-                            </li>
-                            <li><a href="faq.html">Preguntas frecuentes</a>
+                            <li><a href="faq.php">Preguntas frecuentes</a>
                             </li>
                             <li><a href="contact.php">Cont&aacute;ctanos</a>
                             </li>

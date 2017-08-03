@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
 
@@ -11,8 +11,11 @@
     <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
     <meta name="keywords" content="">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
     <title>
-        Obaju : e-commerce template
+        Redes y equipos pesqueros
     </title>
 
     <meta name="keywords" content="">
@@ -20,43 +23,42 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- styles -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="../../resources/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="../../resources/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../resources/assets/css/animate.min.css" rel="stylesheet">
+    <link href="../../resources/assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="../../resources/assets/css/owl.theme.css" rel="stylesheet">
 
     <!-- theme stylesheet -->
-    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="../../resources/assets/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- your stylesheet with modifications -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="../../resources/assets/css/custom.css" rel="stylesheet">
 
-    <script src="js/respond.min.js"></script>
+    <script src="../../resources/assets/js/redes/respond.min.js"></script>
 
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="../../resources/assets/imgn/logo.png">
 
 
 
 </head>
 
 <body>
+
     <!-- *** TOPBAR ***
  _________________________________________________________ -->
     <div id="top">
         <div class="container">
             <div class="col-md-6 offer" data-animate="fadeInDown">
-                <a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Offer of the day</a>  <a href="#">Get flat 35% off on orders over $50!</a>
+                <a class="btn btn-success btn-sm" data-animate-hover="shake">Oferta del d&iacute;a</a>   <a>¡Cada compra con hasta un 30% de descuento!</a>
             </div>
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
-                    <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                    <li><a href="#" data-toggle="modal" data-target="#login-modal">Iniciar sesi&oacute;n</a>
                     </li>
-                    <li><a href="register.html">Register</a>
+                    <li><a href="register.php">Nuevo registro</a>
                     </li>
-                    <li><a href="contact.html">Contact</a>
-                    </li>
-                    <li><a href="#">Recently viewed</a>
+                    <li><a href="contact.php">Cont&aacute;ctanos</a>
                     </li>
                 </ul>
             </div>
@@ -67,25 +69,25 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="Login">Customer login</h4>
+                        <h4 class="modal-title" id="Login">Inicio de sesión</h4>
                     </div>
                     <div class="modal-body">
                         <form action="customer-orders.html" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email-modal" placeholder="email">
+                                <input type="text" class="form-control" id="email-modal" placeholder="Correo electr&oacute;nico">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password-modal" placeholder="password">
+                                <input type="password" class="form-control" id="password-modal" placeholder="Contrase&ntilde;a">
                             </div>
 
                             <p class="text-center">
-                                <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                                <button class="btn btn-primary"><i class="fa fa-sign-in"></i>Iniciar sesi&oacute;n</button>
                             </p>
 
                         </form>
 
-                        <p class="text-center text-muted">Not registered yet?</p>
-                        <p class="text-center text-muted"><a href="register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+                        <p class="text-center text-muted">¿A&uacute;n no te registras?</p>
+                        <p class="text-center text-muted"><a href="register.php"><strong>¡Registrate ahora!</strong></a>bEs muy sencillo y en tan solo 1 minuto comenzar&aacute;s a disfrutar de nuestras ofertas especiales</p>
 
                     </div>
                 </div>
@@ -103,9 +105,9 @@
         <div class="container">
             <div class="navbar-header">
 
-                <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                    <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                <a class="navbar-brand home" href="principal.php" data-animate-hover="bounce">
+                    <img src="../../resources/assets/imgn/logo.png" alt="Obaju logo" class="hidden-xs">
+                    <img src="../../resources/assets/imgn/logo.png" alt="Obaju logo" class="visible-xs"><span class="sr-only"></span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -116,8 +118,8 @@
                         <span class="sr-only">Toggle search</span>
                         <i class="fa fa-search"></i>
                     </button>
-                    <a class="btn btn-default navbar-toggle" href="basket.html">
-                        <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
+                    <a class="btn btn-default navbar-toggle" href="carrito.php">
+                        <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">0 Productos</span>
                     </a>
                 </div>
             </div>
@@ -126,74 +128,71 @@
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="index.html">Home</a>
+                    <li class="active"><a href="principal.php">Inicio</a>
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Categorias <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h5>Clothing</h5>
+                                            <h5>Redes</h5>
                                             <ul>
-                                                <li><a href="category.html">T-shirts</a>
+                                                <li><a href="category.php">Redes de nylon</a>
                                                 </li>
-                                                <li><a href="category.html">Shirts</a>
+                                                <li><a href="category.php">Red de pesca</a>
                                                 </li>
-                                                <li><a href="category.html">Pants</a>
+                                                <li><a href="category.php">Recolectoras</a>
                                                 </li>
-                                                <li><a href="category.html">Accessories</a>
+                                                <li><a href="category.php">Alt&iacute;metro</a>
+                                                </li>
+                                                <li><a href="category.php">Hilo de nylon</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Shoes</h5>
+                                            <h5>Se&ntilde;uelos</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                <li><a href="category.php">Serie "A"</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
+                                                <li><a href="category.php">Serie "B"</a>
                                                 </li>
-                                                <li><a href="category.html">Hiking shoes</a>
+                                                <li><a href="category.php">Serie 10</a>
                                                 </li>
-                                                <li><a href="category.html">Casual</a>
+                                                <li><a href="category.php">Serie MLF</a>
+                                                </li>
+                                                <li><a href="category.php">Tipo cocodrilo</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Accessories</h5>
+                                            <h5>Ca&ntilde;as</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                <li><a href="category.php">Ca&ntilde;as mar</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
+                                                <li><a href="category.php">Ca&ntilde;as agua dulce</a>
                                                 </li>
-                                                <li><a href="category.html">Hiking shoes</a>
+                                                <li><a href="category.php">Ca&ntilde;as se&ntilde;uelos</a>
                                                 </li>
-                                                <li><a href="category.html">Casual</a>
+                                                <li><a href="category.php">Carretes</a>
                                                 </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
+                                                <li><a href="category.php">Soporte y fundas</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Featured</h5>
+                                            <h5>Arpones</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                <li><a href="category.php">Arp&oacute;n Gimexsa</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
+                                                <li><a href="category.php">Arp&oacute;n Hawaiano</a>
                                                 </li>
-                                                <li><a href="category.html">Hiking shoes</a>
+                                                <li><a href="category.php">Liga para Arp&oacute;n</a>
                                                 </li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                <li><a href="category.php">Varilla para Arp&oacute;n</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
+                                                <li><a href="category.php">Punta para Arp&oacute;n</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -204,84 +203,7 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Ladies <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="yamm-content">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h5>Clothing</h5>
-                                            <ul>
-                                                <li><a href="category.html">T-shirts</a>
-                                                </li>
-                                                <li><a href="category.html">Shirts</a>
-                                                </li>
-                                                <li><a href="category.html">Pants</a>
-                                                </li>
-                                                <li><a href="category.html">Accessories</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Shoes</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="banner">
-                                                <a href="#">
-                                                    <img src="img/banner.jpg" class="img img-responsive" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="banner">
-                                                <a href="#">
-                                                    <img src="img/banner2.jpg" class="img img-responsive" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.yamm-content -->
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown yamm-fw">
+                    <!--li class="dropdown yamm-fw">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
@@ -290,11 +212,11 @@
                                         <div class="col-sm-3">
                                             <h5>Shop</h5>
                                             <ul>
-                                                <li><a href="index.html">Homepage</a>
+                                                <li><a href="principal.php">Homepage</a>
                                                 </li>
-                                                <li><a href="category.html">Category - sidebar left</a>
+                                                <li><a href="category.php">Category - sidebar left</a>
                                                 </li>
-                                                <li><a href="category-right.html">Category - sidebar right</a>
+                                                <li><a href="category.php">Category - sidebar right</a>
                                                 </li>
                                                 <li><a href="category-full.html">Category - full width</a>
                                                 </li>
@@ -353,10 +275,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /.yamm-content -->
+                                <!-- /.yamm-content>
                             </li>
                         </ul>
-                    </li>
+                    </li-->
                 </ul>
 
             </div>
@@ -365,7 +287,8 @@
             <div class="navbar-buttons">
 
                 <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                    <a href="carrito.php" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">0
+                        Productos</span></a>
                 </div>
                 <!--/.nav-collapse -->
 
@@ -382,12 +305,12 @@
 
                 <form class="navbar-form" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Buscar">
                         <span class="input-group-btn">
 
-			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
 
-		    </span>
+            </span>
                     </div>
                 </form>
 
@@ -408,9 +331,9 @@
 
                 <div class="col-md-12">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a>
+                        <li><a href="principal.php">Inicio</a>
                         </li>
-                        <li>Text page</li>
+                        <li>Nosotros</li>
                     </ul>
                 </div>
 
@@ -420,19 +343,19 @@
                     <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
-                            <h3 class="panel-title">Pages</h3>
+                            <h3 class="panel-title">P&aacute;ginas</h3>
                         </div>
 
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
-                                <li>
-                                    <a href="text.html">Text page</a>
+                                <li >
+                                    <a href="faq.php">Preguntas frecuentes</a>
                                 </li>
-                                <li>
-                                    <a href="contact.html">Contact page</a>
+                                <li >
+                                    <a href="contact.php">Cont&aacute;cto</a>
                                 </li>
-                                <li>
-                                    <a href="faq.html">FAQ</a>
+                                <li class="active">
+                                    <a href="text.php">Nosotros</a>
                                 </li>
 
                             </ul>
@@ -445,7 +368,7 @@
 
                     <div class="banner">
                         <a href="#">
-                            <img src="img/banner.jpg" alt="sales 2014" class="img-responsive">
+                            <img src="../assets/imgn/banner.jpg" alt="sales 2014" class="img-responsive">
                         </a>
                     </div>
                 </div>
@@ -453,55 +376,34 @@
                 <div class="col-md-9">
 
                     <div class="box" id="text-page">
-                        <h1>Text formatting - Header level 1</h1>
+                        <h1>Nuestra historia</h1>
 
-                        <p class="lead">This page aim is to show you the most common HTML elements appearance on the website. For further reference please visit official <a href="http://getbootstrap.com/css/" class="external">Bootstrap website</a>.</p>
+                        <p>Redes y Equipos Pesqueros S.A. de C.V, nace con el nombre de Consorcio Pesquero del Norte S.A. en septiembre de 1999, luego de la unificación de los activos pesqueros e industriales de la Empresa Pesquera Eperva S.A., Pesquera Iquique-Guanaye S.A. y Sociedad Pesquera Coloso S.A., las principales compañías que operaban en las regiones de Arica y Parinacota, Tarapacá y Antofagasta. Estas empresas, pioneras en el desarrollo de la industria pesquera nacional, decidieron asociarse para afrontar la menor disponibilidad de recursos pesqueros que afectaba a la industria de la zona norte del país, particularmente en la segunda mitad de la década de los 90. Con esta nueva estructura se enfrentaron exitosamente las condiciones de entorno, restituyendo el dinamismo a la actividad pesquera de Chile y alcanzando un sólido posicionamiento comercial en los mercados nacional e internacional.</p>
 
-                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris
-                            placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum
-                            rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-                        <h2>Header Level 2</h2>
-
-                        <ol>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ol>
-
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
-                                tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                        </blockquote>
-
-                        <h3>Header Level 3</h3>
-
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ul>
+                        
 
                         <hr>
 
-                        <h2>Images</h2>
+                        <h2>Un lugar para ti...</h2>
 
                         <div class="row">
                             <div class="col-md-4">
                                 <p class="text-center">
-                                    <img src="img/detailsquare.jpg" class="img-circle img-responsive" alt="">
+                                    <img src="../assets/imgn/01.jpg" class="img-rounded img-responsive" alt="">
                                 </p>
-                                <p class="text-center">circle</p>
+                                <p class="text-center"></p>
                             </div>
                             <div class="col-md-4">
                                 <p class="text-center">
-                                    <img src="img/detailsquare.jpg" class="img-thumbnail  img-responsive" alt="">
+                                    <img src="../assets/imgn/05.jpg" class="img-rounded  img-responsive" alt="">
                                 </p>
-                                <p class="text-center">thumbnail</p>
+                                <p class="text-center"></p>
                             </div>
                             <div class="col-md-4">
                                 <p class="text-center">
-                                    <img src="img/detailsquare.jpg" class="img-rounded img-responsive" alt="">
+                                    <img src="../assets/imgn/06.jpg" class="img-rounded img-responsive" alt="">
                                 </p>
-                                <p class="text-center">rounded</p>
+                                <p class="text-center"></p>
                             </div>
                         </div>
 
@@ -516,33 +418,33 @@
         <!-- /#content -->
 
 
-        <!-- *** FOOTER ***
+                <!-- *** FOOTER ***
  _________________________________________________________ -->
         <div id="footer" data-animate="fadeInUp">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
-                        <h4>Pages</h4>
+                        <h4>Pag&iacute;nas</h4>
 
                         <ul>
-                            <li><a href="text.html">About us</a>
+                            <li><a href="text.html">Nosotros</a>
                             </li>
-                            <li><a href="text.html">Terms and conditions</a>
+                            <li><a href="text.html">Terminos y condiciones</a>
                             </li>
-                            <li><a href="faq.html">FAQ</a>
+                            <li><a href="faq.html">Preguntas frecuentes</a>
                             </li>
-                            <li><a href="contact.html">Contact us</a>
+                            <li><a href="contact.php">Cont&aacute;ctanos</a>
                             </li>
                         </ul>
 
                         <hr>
 
-                        <h4>User section</h4>
+                        <h4>Opciones del usuario</h4>
 
                         <ul>
-                            <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                            <li><a href="register.php" data-toggle="modal" data-target="#login-modal">Acceso</a>
                             </li>
-                            <li><a href="register.html">Regiter</a>
+                            <li><a href="register.php">Registro</a>
                             </li>
                         </ul>
 
@@ -553,28 +455,26 @@
 
                     <div class="col-md-3 col-sm-6">
 
-                        <h4>Top categories</h4>
+                        <h4>Principales categor&iacute;as</h4>
 
-                        <h5>Men</h5>
+                        <h5>Redes</h5>
 
                         <ul>
-                            <li><a href="category.html">T-shirts</a>
+                            <li><a href="category.php">Redes de nylon</a>
                             </li>
-                            <li><a href="category.html">Shirts</a>
+                            <li><a href="category.php">Hilo de nylon</a>
                             </li>
-                            <li><a href="category.html">Accessories</a>
+                            <li><a href="category.php">Recolectoras</a>
                             </li>
                         </ul>
 
-                        <h5>Ladies</h5>
+                        <h5>ca&ntilde;as</h5>
                         <ul>
-                            <li><a href="category.html">T-shirts</a>
+                            <li><a href="category.php">Ca&ntilde;as de mar</a>
                             </li>
-                            <li><a href="category.html">Skirts</a>
+                            <li><a href="category.php">Ca&ntilde;as de agua dulce</a>
                             </li>
-                            <li><a href="category.html">Pants</a>
-                            </li>
-                            <li><a href="category.html">Accessories</a>
+                            <li><a href="category.php">Se&ntilde;uelos</a>
                             </li>
                         </ul>
 
@@ -585,18 +485,18 @@
 
                     <div class="col-md-3 col-sm-6">
 
-                        <h4>Where to find us</h4>
+                        <h4>D&oacute;nde encontr&aacute;rnos</h4>
 
-                        <p><strong>Obaju Ltd.</strong>
-                            <br>13/25 New Avenue
-                            <br>New Heaven
-                            <br>45Y 73J
-                            <br>England
+                        <p><strong>Vis&iacute;tanos en:</strong>
+                            <br>Jes&uacute;s Garc&iacute;a 187
+                            <br>Col. Centro
+                            <br>C.P. 45100
+                            <br>Zapopan, Jalisco
                             <br>
-                            <strong>Great Britain</strong>
+                            <strong>M&eacute;xico</strong>
                         </p>
 
-                        <a href="contact.html">Go to contact page</a>
+                        <a href="contact.php">Ir a cont&aacute;cto</a>
 
                         <hr class="hidden-md hidden-lg">
 
@@ -607,20 +507,20 @@
 
                     <div class="col-md-3 col-sm-6">
 
-                        <h4>Get the news</h4>
+                        <h4>Rec&iacute;be nuestras ofertas</h4>
 
-                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p class="text-muted">Mamt&eacute;nte actualizado con nuestras m&aacute;s recientes ofertas y los nuevos art&iacute;culos de nuestro blog.</p>
 
                         <form>
                             <div class="input-group">
 
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" placeholder="Correo electr&oacute;nico">
 
                                 <span class="input-group-btn">
 
-			    <button class="btn btn-default" type="button">Subscribe!</button>
+                <button class="btn btn-default" type="button">¡Suscr&iacute;bete!</button>
 
-			</span>
+            </span>
 
                             </div>
                             <!-- /input-group -->
@@ -628,7 +528,7 @@
 
                         <hr>
 
-                        <h4>Stay in touch</h4>
+                        <h4>Nuestras redes sociales</h4>
 
                         <p class="social">
                             <a href="#" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
@@ -660,14 +560,10 @@
         <div id="copyright">
             <div class="container">
                 <div class="col-md-6">
-                    <p class="pull-left">© 2015 Your name goes here.</p>
+                    <p class="pull-left">© 2017 CODEV.</p>
 
                 </div>
-                <div class="col-md-6">
-                    <p class="pull-right">Template by <a href="https://bootstrapious.com/e-commerce-templates">Bootstrapious.com</a>
-                         <!-- Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate  -->
-                    </p>
-                </div>
+
             </div>
         </div>
         <!-- *** COPYRIGHT END *** -->

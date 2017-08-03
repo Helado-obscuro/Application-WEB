@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<?php
+    session_start();
+    if (@!$_SESSION['user']) {
+        header("Location:principal.php");
+    }
+    ?>
+
 <html lang="{{ app()->getLocale() }}">
 
 <head>
@@ -54,11 +62,11 @@
             </div>
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
-                    <li><a href="#" data-toggle="modal" data-target="#login-modal">Iniciar sesi&oacute;n</a>
-                    </li>
+                    <li><a href="">Bienvenido <strong><?php echo $_SESSION['user'];?></strong> </a></li>
                     <li><a href="register.php">Nuevo registro</a>
                     </li>
                     <li><a href="contact.php">Cont&aacute;ctanos</a>
+                    <li><a href="desconectar.php"> Cerrar Sesión </a></li>
                     </li>
                 </ul>
             </div>
@@ -72,12 +80,12 @@
                         <h4 class="modal-title" id="Login">Inicio de sesión</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="customer-orders.html" method="post">
+                        <form action="validar.php" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email-modal" placeholder="Correo electr&oacute;nico">
+                                <input type="text" class="form-control" id="email-modal" placeholder="Correo electr&oacute;nico" name="mail">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password-modal" placeholder="Contrase&ntilde;a">
+                                <input type="password" class="form-control" id="password-modal" placeholder="Contrase&ntilde;a" name="pass">
                             </div>
 
                             <p class="text-center">
@@ -87,7 +95,7 @@
                         </form>
 
                         <p class="text-center text-muted">¿A&uacute;n no te registras?</p>
-                        <p class="text-center text-muted"><a href="register.php"><strong>¡Registrate ahora!</strong></a>bEs muy sencillo y en tan solo 1 minuto comenzar&aacute;s a disfrutar de nuestras ofertas especiales</p>
+                        <p class="text-center text-muted"><a href="register.php"><strong>¡Registrate ahora! </strong></a>bEs muy sencillo y en tan solo 1 minuto comenzar&aacute;s a disfrutar de nuestras ofertas especiales</p>
 
                     </div>
                 </div>
@@ -324,256 +332,294 @@
 
     <!-- *** NAVBAR END *** -->
 
+
+
     <div id="all">
 
         <div id="content">
+
             <div class="container">
-
                 <div class="col-md-12">
-                    <ul class="breadcrumb">
-                        <li><a href="principal.php">Inicio</a>
-                        </li>
-                        <li>Carrito de compra</li>
-                    </ul>
+                    <div id="main-slider">
+                        <div class="item">
+                            <img src="../../resources/assets/imgn/Slider01.jpg" alt="" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="../../resources/assets/imgn/Slider02.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="../../resources/assets/imgn/Slider03.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="../../resources/assets/imgn/Slider04.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="../../resources/assets/imgn/Slider05.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- /#main-slider -->
                 </div>
+            </div>
 
-                <div class="col-md-9" id="basket">
+            <!-- *** ADVANTAGES HOMEPAGE ***
+ _________________________________________________________ -->
+            <div id="advantages">
 
-                    <div class="box">
-
-                        <form method="post" action="checkout1.html">
-
-                            <h1>Carrito de compra</h1>
-                            <p class="text-muted">Actualmente tienes 0 producto(s) en tu carrito.</p>
-                            <div class="table-responsive">
-                                <!--table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Producto</th>
-                                            <th>Cantidad</th>
-                                            <th>Precio unitario</th>
-                                            <th>Descuento</th>
-                                            <th colspan="2">Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    <img src="img/detailsquare.jpg" alt="White Blouse Armani">
-                                                </a>
-                                            </td>
-                                            <td><a href="#">White Blouse Armani</a>
-                                            </td>
-                                            <td>
-                                                <input type="number" value="2" class="form-control">
-                                            </td>
-                                            <td>$123.00</td>
-                                            <td>$0.00</td>
-                                            <td>$246.00</td>
-                                            <td><a href="#"><i class="fa fa-trash-o"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    <img src="img/basketsquare.jpg" alt="Black Blouse Armani">
-                                                </a>
-                                            </td>
-                                            <td><a href="#">Black Blouse Armani</a>
-                                            </td>
-                                            <td>
-                                                <input type="number" value="1" class="form-control">
-                                            </td>
-                                            <td>$200.00</td>
-                                            <td>$0.00</td>
-                                            <td>$200.00</td>
-                                            <td><a href="#"><i class="fa fa-trash-o"></i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th colspan="5">Total</th>
-                                            <th colspan="2">$446.00</th>
-                                        </tr>
-                                    </tfoot>
-                                </table-->
-
-                            </div>
-                            <!-- /.table-responsive -->
-
-                            <div class="box-footer">
-                                <div class="pull-left">
-                                    <a href="category.php" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continuar comprando</a>
+                <div class="container">
+                    <div class="same-height-row">
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-heart"></i>
                                 </div>
-                                <div class="pull-right">
-                                    <button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar carrito</button>
-                                    <button type="submit" class="btn btn-primary">Realizar compra <i class="fa fa-chevron-right"></i>
-                                    </button>
-                                </div>
+
+                                <h3><a>Atenci&oacute;n personalizada</a></h3>
+                                <p>Nos distinguen por tener el mejor trato a nuestro clientes</p>
                             </div>
+                        </div>
 
-                        </form>
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-tags"></i>
+                                </div>
 
+                                <h3><a>Los mejores precios</a></h3>
+                                <p>Ten&eacute;mos los mejores precios del mercado ¡ven y compu&eacute;balo!.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-thumbs-up"></i>
+                                </div>
+
+                                <h3><a>SATISFACCI&Oacute;N 100% GARANTIZADA</a></h3>
+                                <p>Garantía de 6 meses en todos nuestros prductos.</p>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /.box -->
-
-
-                    <div class="row same-height-row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box same-height">
-                                <h3>Tambi&eacute;n te pueden interesar estos productos</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product same-height">
-                                <div class="flip-container">
-                                    <div class="flipper">
-                                        <div class="front">
-                                            <a href="detail.html">
-                                                <img src="../assets/imgn/producto02.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                        <div class="back">
-                                            <a href="detail.html">
-                                                <img src="../assets/imgn/producto02.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="detail.html" class="invisible">
-                                    <img src="../assets/imgn/producto02.jpg" alt="" class="img-responsive">
-                                </a>
-                                <div class="text">
-                                    <h3>Carrete de grafito</h3>
-                                    <p class="price">$535.00</p>
-                                </div>
-                            </div>
-                            <!-- /.product -->
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product same-height">
-                                <div class="flip-container">
-                                    <div class="flipper">
-                                        <div class="front">
-                                            <a href="detail.html">
-                                                <img src="../assets/imgn/producto04.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                        <div class="back">
-                                            <a href="detail.html">
-                                                <img src="../assets/imgn/producto04.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="detail.html" class="invisible">
-                                    <img src="../assets/imgn/producto04.jpg" alt="" class="img-responsive">
-                                </a>
-                                <div class="text">
-                                    <h3>Anzuelo cuchara giratoria</h3>
-                                    <p class="price">$139.00</p>
-                                </div>
-                            </div>
-                            <!-- /.product -->
-                        </div>
-
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product same-height">
-                                <div class="flip-container">
-                                    <div class="flipper">
-                                        <div class="front">
-                                            <a href="detail.html">
-                                                <img src="../assets/imgn/producto05.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                        <div class="back">
-                                            <a href="detail.html">
-                                                <img src="../assets/imgn/producto05.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="detail.html" class="invisible">
-                                    <img src="../assets/imgn/producto05.jpg" alt="" class="img-responsive">
-                                </a>
-                                <div class="text">
-                                    <h3>Esmerillones</h3>
-                                    <p class="price">$200.00</p>
-
-                                </div>
-                            </div>
-                            <!-- /.product -->
-                        </div>
-
-                    </div>
-
+                    <!-- /.row -->
 
                 </div>
-                <!-- /.col-md-9 -->
-
-                <div class="col-md-3">
-                    <div class="box" id="order-summary">
-                        <div class="box-header">
-                            <h3>Orden de compra</h3>
-                        </div>
-                        <p class="text-muted">El env&iacute;o y los costos adicionales se calculan en funci&oacute;n de los valores introducidos.</p>
-
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <td>Subtotal</td>
-                                        <th>$0.00</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Env&iacute;o</td>
-                                        <th>$0.00</th>
-                                    </tr>
-                                    <tr>
-                                        <td>IVA</td>
-                                        <th>$0.00</th>
-                                    </tr>
-                                    <tr class="total">
-                                        <td>Total</td>
-                                        <th>$0.00</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-
-
-                    <div class="box">
-                        <div class="box-header">
-                            <h4>C&oacute;digo de promoci&oacute;n</h4>
-                        </div>
-                        <p class="text-muted">Si tienes un codigo de promoci&oacute;n, por favor introducelo en el siguiente cuadro.</p>
-                        <form>
-                            <div class="input-group">
-
-                                <input type="text" class="form-control">
-
-                                <span class="input-group-btn">
-
-					<button class="btn btn-primary" type="button"><i class="fa fa-gift"></i></button>
-
-				    </span>
-                            </div>
-                            <!-- /input-group -->
-                        </form>
-                    </div>
-
-                </div>
-                <!-- /.col-md-3 -->
+                <!-- /.container -->
 
             </div>
+            <!-- /#advantages -->
+
+            <!-- *** ADVANTAGES END *** -->
+
+            <!-- *** HOT PRODUCT SLIDESHOW ***
+ _________________________________________________________ -->
+            <div id="hot">
+
+                <div class="box">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <h2>Ofertas de la semana</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="product-slider">
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto01.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto01.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.php" class="invisible">
+                                    <img src="../../resources/assets/imgn/producto01.jpg" alt="" class="img-responsive">
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.php">Cebo tipo jaula con 5 anzuelos</a></h3>
+                                    <p class="price">$243.00</p>
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto02.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto02.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.php" class="invisible">
+                                    <img src="../../resources/assets/imgn/producto02.jpg" alt="" class="img-responsive">
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.php">Carrete de grafito</a></h3>
+                                    <p class="price"><del>$660.00</del> $535.00</p>
+                                </div>
+                                <!-- /.text -->
+
+                                <div class="ribbon new">
+                                    <div class="theribbon">NEW</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto03.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto03.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.html" class="invisible">
+                                    <img src="../../resources/assets/imgn/producto03.jpg" alt="" class="img-responsive">
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.php">Organizador de pesca</a></h3>
+                                    <p class="price">$120.00</p>
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto04.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto04.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.php" class="invisible">
+                                    <img src="../../resources/assets/imgn/producto04.jpg" alt="" class="img-responsive">
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.php">Anzuelo cuchara giratoria</a></h3>
+                                    <p class="price">$139.00</p>
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                        <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto05.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.php">
+                                                <img src="../../resources/assets/imgn/producto05.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.html" class="invisible">
+                                    <img src="../../resources/assets/imgn/producto05.jpg" alt="" class="img-responsive">
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.php">Esmerillones</a></h3>
+                                    <p class="price">$200.00</p>
+                                </div>
+                                <!-- /.text -->
+                    </div>
+                    <!-- /.product-slider -->
+                </div>
+                <!-- /.container -->
+
+            </div>
+            <!-- /#hot -->
+
+            <!-- *** HOT END *** -->
+
+            <!-- *** GET INSPIRED ***
+ _________________________________________________________ -->
+            <div class="container" data-animate="fadeInUpBig">
+                <div class="col-md-12">
+                    <div class="box slideshow">
+                        <h3>An&Iacute;mate</h3>
+                        <p class="lead">Ya sea por deporte o por oficio, pescar te da paz y nosotros tenemos todo lo que necesitas.</p>
+                        <div id="get-inspired" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="../../resources/assets/imgn/animate1.jpg" alt="Get inspired" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="../../resources/assets/imgn/animate2.jpg" alt="Get inspired" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="../../resources/assets/imgn/animate3.jpg" alt="Get inspired" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *** GET INSPIRED END *** -->
+
+            <!-- *** BLOG HOMEPAGE ***
+ _________________________________________________________ -->
+
+            <div class="box text-center" data-animate="fadeInUp">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h3 class="text-uppercase">Nuestro blog</h3>
+
+                        <p class="lead">Donde encontraras consejos pr&aacute;cticos para una buena pesca <a href="blog.php">¡Vis&iacute;talo!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
             <!-- /.container -->
+
+            <!-- *** BLOG HOMEPAGE END *** -->
+
+
         </div>
         <!-- /#content -->
 
@@ -599,7 +645,7 @@
                         <h4>Opciones del usuario</h4>
 
                         <ul>
-                            <li><a href="register.php" data-toggle="modal" data-target="#login-modal">Acceso</a>
+                            <li><a href="#" data-toggle="modal" data-target="#login-modal">Acceso</a>
                             </li>
                             <li><a href="register.php">Registro</a>
                             </li>
@@ -732,19 +778,17 @@
 
 
 
-    
 
     <!-- *** SCRIPTS TO INCLUDE ***
  _________________________________________________________ -->
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/bootstrap-hover-dropdown.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/front.js"></script>
-
+    <script src="../../resources/assets/js/redes/jquery-1.11.0.min.js"></script>
+    <script src="../../resources/assets/js/redes/bootstrap.min.js"></script>
+    <script src="../../resources/assets/js/redes/jquery.cookie.js"></script>
+    <script src="../../resources/assets/js/redes/waypoints.min.js"></script>
+    <script src="../../resources/assets/js/redes/modernizr.js"></script>
+    <script src="../../resources/assets/js/redes/bootstrap-hover-dropdown.js"></script>
+    <script src="../../resources/assets/js/redes/owl.carousel.min.js"></script>
+    <script src="../../resources/assets/js/redes/front.js"></script>
 
 
 </body>

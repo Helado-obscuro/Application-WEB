@@ -372,13 +372,11 @@
                         <h4>P&aacute;ginas</h4>
 
                         <ul>
-                            <li><a href="text.html">Nosotros</a>
+                            <li><a href="text.php">Nosotros</a>
                             </li>
-                            <li><a href="text.html">Terminos y condiciones</a>
+                            <li><a href="faq.php">Preguntas frecuentes</a>
                             </li>
-                            <li><a href="faq.html">Preguntas frecuentes</a>
-                            </li>
-                            <li><a href="contact.html">Cont&aacute;ctanos</a>
+                            <li><a href="contact.php">Cont&aacute;ctanos</a>
                             </li>
                         </ul>
 

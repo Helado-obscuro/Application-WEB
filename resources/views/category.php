@@ -400,7 +400,7 @@
                                     <ul>
                                         <li><a href="category.php">Arp&oacute;n Gimexsa</a>
                                         </li>
-                                        <li><a href="category.php">Arp&aacute;n hawaiano</a>
+                                        <li><a href="category.php">Arp&oacute;n hawaiano</a>
                                         </li>
                                         <li><a href="category.php">Liga para arp&oacute;n</a>
                                         </li>
@@ -565,10 +565,10 @@
                                     <img src="../assets/imgn/producto01.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Cebo tipo jaula con 5 anzuelos</a></h3>
+                                    <h3><a href="detail.php">Cebo tipo jaula con 5 anzuelos</a></h3>
                                     <p class="price">$243.00</p>
                                     <p class="buttons">
-                                        <a href="detail.html" class="btn btn-default">Ver detalles</a>
+                                        <a href="detail.php" class="btn btn-default">Ver detalles</a>
                                         <a href="carrito.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
                                     </p>
                                 </div>
@@ -582,25 +582,25 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto02.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto02.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="detail.php" class="invisible">
                                     <img src="../assets/imgn/producto02.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Carrte de grafito</a></h3>
+                                    <h3><a href="detail.php">Carrte de grafito</a></h3>
                                     <p class="price"><del>$600</del> $535.00</p>
                                     <p class="buttons">
-                                        <a href="detail.html" class="btn btn-default">Ver detalles</a>
+                                        <a href="detail.php" class="btn btn-default">Ver detalles</a>
                                         <a href="carrito.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
                                     </p>
                                 </div>
@@ -632,25 +632,25 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto03.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto03.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="detail.php" class="invisible">
                                     <img src="../assets/imgn/producto03.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Organizador de pesca</a></h3>
+                                    <h3><a href="detail.php">Organizador de pesca</a></h3>
                                     <p class="price">$120.00</p>
                                     <p class="buttons">
-                                        <a href="detail.html" class="btn btn-default">Ver detalles</a>
+                                        <a href="detail.php" class="btn btn-default">Ver detalles</a>
                                         <a href="carrito.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
                                     </p>
 
@@ -665,25 +665,25 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto04.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto04.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="detail.php" class="invisible">
                                     <img src="../assets/imgn/producto04.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Anzuelo cuchara giratoria</a></h3>
+                                    <h3><a href="detail.php">Anzuelo cuchara giratoria</a></h3>
                                     <p class="price">$139.00</p>
                                     <p class="buttons">
-                                        <a href="detail.html" class="btn btn-default">Ver detalles</a>
+                                        <a href="detail.php" class="btn btn-default">Ver detalles</a>
                                         <a href="carrito.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
                                     </p>
 
@@ -698,25 +698,25 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto05.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto05.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="detail.php" class="invisible">
                                     <img src="../assets/imgn/producto05.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">esmerillones</a></h3>
+                                    <h3><a href="detail.php">esmerillones</a></h3>
                                     <p class="price">$200.00</p>
                                     <p class="buttons">
-                                        <a href="detail.html" class="btn btn-default">Ver detalles</a>
+                                        <a href="detail.php" class="btn btn-default">Ver detalles</a>
                                         <a href="carrito.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
                                     </p>
 
@@ -737,12 +737,12 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto06.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="detail.php">
                                                 <img src="../assets/imgn/producto06.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
@@ -752,10 +752,10 @@
                                     <img src="../assets/imgn/producto06.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Arp&oacute;n profesional</a></h3>
+                                    <h3><a href="detail.php">Arp&oacute;n profesional</a></h3>
                                     <p class="price">$2700.00</p>
                                     <p class="buttons">
-                                        <a href="detail.html" class="btn btn-default">Ver detalles</a>
+                                        <a href="detail.php" class="btn btn-default">Ver detalles</a>
                                         <a href="carrito.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
                                     </p>
 
@@ -817,11 +817,9 @@
                         <h4>Pag&iacute;nas</h4>
 
                         <ul>
-                            <li><a href="text.html">Nosotros</a>
+                            <li><a href="text.php">Nosotros</a>
                             </li>
-                            <li><a href="text.html">Terminos y condiciones</a>
-                            </li>
-                            <li><a href="faq.html">Preguntas frecuentes</a>
+                            <li><a href="faq.php">Preguntas frecuentes</a>
                             </li>
                             <li><a href="contact.php">Cont&aacute;ctanos</a>
                             </li>

@@ -72,12 +72,12 @@
                         <h4 class="modal-title" id="Login">Inicio de sesión</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="customer-orders.html" method="post">
+                        <form action="validar.php" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email-modal" placeholder="Correo electr&oacute;nico">
+                                <input type="text" class="form-control" id="email-modal" placeholder="Correo electr&oacute;nico" name="mail">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password-modal" placeholder="Contrase&ntilde;a">
+                                <input type="password" class="form-control" id="password-modal" placeholder="Contrase&ntilde;a" name="pass">
                             </div>
 
                             <p class="text-center">
@@ -87,7 +87,7 @@
                         </form>
 
                         <p class="text-center text-muted">¿A&uacute;n no te registras?</p>
-                        <p class="text-center text-muted"><a href="register.php"><strong>¡Registrate ahora!</strong></a>bEs muy sencillo y en tan solo 1 minuto comenzar&aacute;s a disfrutar de nuestras ofertas especiales</p>
+                        <p class="text-center text-muted"><a href="register.php"><strong>¡Registrate ahora! </strong></a>bEs muy sencillo y en tan solo 1 minuto comenzar&aacute;s a disfrutar de nuestras ofertas especiales</p>
 
                     </div>
                 </div>
@@ -624,11 +624,9 @@
                         <h4>Pag&iacute;nas</h4>
 
                         <ul>
-                            <li><a href="text.html">Nosotros</a>
+                            <li><a href="text.php">Nosotros</a>
                             </li>
-                            <li><a href="text.html">Terminos y condiciones</a>
-                            </li>
-                            <li><a href="faq.html">Preguntas frecuentes</a>
+                            <li><a href="faq.php">Preguntas frecuentes</a>
                             </li>
                             <li><a href="contact.php">Cont&aacute;ctanos</a>
                             </li>
